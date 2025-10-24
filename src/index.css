@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Color palette */
+    --lucky: 46 65% 38%;
+    --husk: 44 41% 51%;
+    --casal: 190 37% 26%;
+    --desert-storm: 60 9% 92%;
+    --dallas: 40 44% 30%;
+    --smalt-blue: 197 25% 45%;
+    --gumbo: 188 22% 59%;
+    --taupe-gray: 50 10% 63%;
+    --corduroy: 150 13% 42%;
+
+    /* Main backgrounds and surfaces */
+    --background: 60 9% 92%;
+    --foreground: 190 37% 26%;
+    --card: 0 0% 100%;
+    --card-foreground: 190 37% 26%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 190 37% 26%;
+
+    /* Primary: Casal (deep teal) */
+    --primary: 190 37% 26%;
+    --primary-foreground: 60 9% 92%;
+
+    /* Secondary: Smalt Blue */
+    --secondary: 197 25% 45%;
+    --secondary-foreground: 60 9% 92%;
+
+    /* Muted: Gumbo (soft blue-gray) */
+    --muted: 188 22% 59%;
+    --muted-foreground: 190 37% 26%;
+
+    /* Accent: Lucky (golden) */
+    --accent: 46 65% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 50 10% 63%;
+    --input: 50 10% 63%;
+    --ring: 46 65% 38%;
+
+    --radius: 0.625rem;
+
+    /* Premium Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(190 37% 26%), hsl(197 25% 45%));
+    --gradient-gold: linear-gradient(135deg, hsl(46 65% 38%), hsl(44 41% 51%));
+    --gradient-elegant: linear-gradient(to bottom, hsl(0 0% 100%), hsl(60 9% 92%));
+    
+    /* Elegant Shadows */
+    --shadow-premium: 0 25px 70px -15px hsl(190 37% 26% / 0.25);
+    --shadow-gold: 0 10px 40px -10px hsl(46 65% 38% / 0.3);
+    --shadow-soft: 0 5px 20px -5px hsl(190 37% 26% / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Filter to transform white logo to primary color (casal - hsl(190 37% 26%)) */
+  .logo-primary-filter {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(37%) saturate(1500%) hue-rotate(155deg) brightness(0.85);
+  }
+}
