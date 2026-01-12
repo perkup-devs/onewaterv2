@@ -28,7 +28,7 @@ const ProductCan = () => {
                     350ml
                   </p>
                   <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-md">
-                    Design artístico exclusivo com ondas oceânicas em detalhes dourados. Arte que reflete a origem pristina de nossa água.
+                    Design artístico exclusivo com ondas oceânicas em detalhes dourados. Arte que reflete a origem de nossa água.
                   </p>
                 </div>
               </div>
