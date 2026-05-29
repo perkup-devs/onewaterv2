@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import ProductPremium from '@/components/ProductPremium';
 import ProductGlass from '@/components/ProductGlass';
 import ProductCan from '@/components/ProductCan';
 import ProductGold from '@/components/ProductGold';
@@ -11,6 +12,7 @@ const Index = () => {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <ProductPremium />
       <ProductGlass />
       <ProductCan />
       <ProductGold />

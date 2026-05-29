@@ -80,3 +80,26 @@ All colors MUST be HSL.
     filter: brightness(0) saturate(100%) invert(26%) sepia(37%) saturate(1500%) hue-rotate(155deg) brightness(0.85);
   }
 }
+
+@layer components {
+  /* Premium Black & Gold Theme */
+  .bg-premium-dark {
+    background: linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 5%) 100%);
+  }
+
+  .text-gold {
+    color: hsl(46 65% 55%);
+  }
+
+  .bg-gold {
+    background-color: hsl(46 65% 55%);
+  }
+
+  .border-gold {
+    border-color: hsl(46 65% 55% / 0.5);
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(90deg, transparent, hsl(46 65% 55%), transparent);
+  }
+}
