@@ -1,7 +1,9 @@
 import bottleGold from '@/assets/bottle-gold.png';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useLanguage } from '@/i18n';
 
 const ProductGold = () => {
+  const { t } = useLanguage();
   const imageAnim = useScrollAnimation();
   const contentAnim = useScrollAnimation();
   return (
@@ -21,7 +23,7 @@ const ProductGold = () => {
               <div className="relative">
                 <img 
                   src={bottleGold} 
-                  alt="O.N.E. Sparkling Gold Edition"
+                  alt={t.productGold.alt}
                   className="w-full h-auto max-w-lg mx-auto animate-float drop-shadow-2xl"
                 />
               </div>
@@ -33,20 +35,20 @@ const ProductGold = () => {
                 <div className="inline-block">
                   <div className="h-px w-16 bg-accent mb-6"></div>
                   <p className="text-xs uppercase tracking-[0.3em] font-light opacity-90">
-                    Limited Edition
+                    {t.productGold.label}
                   </p>
                 </div>
                 
                 <h2 className="text-5xl lg:text-6xl font-extralight leading-tight">
-                  Sparkling<br />Gold
+                  {t.productGold.titleLine1}<br />{t.productGold.titleLine2}
                 </h2>
                 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg font-light">
-                    750ml
+                    {t.productGold.volume}
                   </p>
                   <p className="text-sm font-light leading-relaxed max-w-md opacity-90">
-                    Edição especial com água gaseificada do oceano Atlântico. Garrafa dourada exclusiva que transforma cada momento em celebração.
+                    {t.productGold.description}
                   </p>
                 </div>
               </div>
@@ -58,7 +60,7 @@ const ProductGold = () => {
                   rel="noopener noreferrer"
                   className="group inline-block px-8 py-4 border border-accent text-accent tracking-[0.2em] text-xs uppercase font-light transition-all duration-700 hover:bg-accent hover:text-accent-foreground"
                 >
-                  Descubra
+                  {t.productGold.cta}
                   <span className="inline-block ml-3 transition-transform duration-700 group-hover:translate-x-2">→</span>
                 </a>
               </div>

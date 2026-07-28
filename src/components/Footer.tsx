@@ -1,6 +1,9 @@
 import logo from '@/assets/logo.png';
+import { useLanguage } from '@/i18n';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-primary text-primary-foreground py-20">
       <div className="container mx-auto px-6">
@@ -15,23 +18,23 @@ const Footer = () => {
               />
               <div className="h-px w-12 bg-accent"></div>
               <p className="text-sm font-light opacity-80 tracking-wide">
-                Pristine Water by Perkup
+                {t.footer.brandText}
               </p>
             </div>
 
             {/* About */}
             <div className="space-y-6">
-              <h4 className="text-sm uppercase tracking-[0.2em] font-light">Ocean Nutrition Effect</h4>
+              <h4 className="text-sm uppercase tracking-[0.2em] font-light">{t.footer.aboutTitle}</h4>
               <p className="text-sm font-light opacity-80 leading-relaxed">
-                Pioneira em tecnologias de purificação do oceano Atlântico
+                {t.footer.aboutText}
               </p>
             </div>
 
             {/* Sustainability */}
             <div className="space-y-6">
-              <h4 className="text-sm uppercase tracking-[0.2em] font-light">100% Brasileiro</h4>
+              <h4 className="text-sm uppercase tracking-[0.2em] font-light">{t.footer.sustainabilityTitle}</h4>
               <p className="text-sm font-light opacity-80 leading-relaxed">
-                Compromisso com sustentabilidade e inovação
+                {t.footer.sustainabilityText}
               </p>
             </div>
           </div>
@@ -40,12 +43,12 @@ const Footer = () => {
           <div className="pt-12 border-t border-primary-foreground/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               <p className="text-xs font-light opacity-60 tracking-wide">
-                © 2025 O.N.E. Todos os direitos reservados.
+                {t.footer.copyright}
               </p>
               <div className="flex gap-8 text-xs font-light opacity-60">
-                <a href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">Premium</a>
-                <a href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">Tecnologia</a>
-                <a href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">Qualidade</a>
+                <a href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">{t.footer.navPremium}</a>
+                <a href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">{t.footer.navTechnology}</a>
+                <a href="#" className="hover:opacity-100 hover:text-accent transition-all duration-300">{t.footer.navQuality}</a>
               </div>
             </div>
           </div>

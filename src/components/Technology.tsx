@@ -1,6 +1,8 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useLanguage } from '@/i18n';
 
 const Technology = () => {
+  const { t } = useLanguage();
   const headerAnim = useScrollAnimation();
   const feature1Anim = useScrollAnimation();
   const feature2Anim = useScrollAnimation();
@@ -15,11 +17,11 @@ const Technology = () => {
             <div className="inline-block">
               <div className="h-px w-20 bg-accent mx-auto mb-8"></div>
               <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-light">
-                Inovação Brasileira
+                {t.technology.label}
               </p>
             </div>
             <h2 className="text-4xl lg:text-5xl font-extralight text-primary leading-relaxed">
-              Nanotecnologia<br />Avançada
+              {t.technology.titleLine1}<br />{t.technology.titleLine2}
             </h2>
           </div>
 
@@ -29,7 +31,7 @@ const Technology = () => {
               <div className="text-5xl font-extralight text-accent">63+</div>
               <div className="h-px w-12 bg-accent/30 mx-auto"></div>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light">
-                Minerais Naturais
+                {t.technology.naturalMinerals}
               </p>
             </div>
             
@@ -37,7 +39,7 @@ const Technology = () => {
               <div className="text-5xl font-extralight text-accent">20km</div>
               <div className="h-px w-12 bg-accent/30 mx-auto"></div>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light">
-                Da Costa
+                {t.technology.fromCoast}
               </p>
             </div>
             
@@ -45,7 +47,7 @@ const Technology = () => {
               <div className="text-5xl font-extralight text-accent">100%</div>
               <div className="h-px w-12 bg-accent/30 mx-auto"></div>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light">
-                Sustentável
+                {t.technology.sustainable}
               </p>
             </div>
           </div>
@@ -54,7 +56,7 @@ const Technology = () => {
           <div ref={qualityAnim.ref} className={`pt-12 transition-all duration-1000 ${qualityAnim.isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <div className="inline-block border border-border px-12 py-6">
               <p className="text-xs uppercase tracking-[0.3em] text-foreground font-light">
-                Padrões OMS
+                {t.technology.oms}
               </p>
             </div>
           </div>

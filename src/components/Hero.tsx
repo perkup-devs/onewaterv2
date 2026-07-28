@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import logo from '@/assets/logo.png';
+import { useLanguage } from '@/i18n';
 
 const Hero = () => {
+  const { t } = useLanguage();
   const [showLine, setShowLine] = useState(false);
   const [showLabel, setShowLabel] = useState(false);
   const [showTitle, setShowTitle] = useState(false);
@@ -30,26 +32,26 @@ const Hero = () => {
             <div className="inline-block">
               <div className={`h-px w-20 bg-accent mx-auto mb-8 transition-all duration-700 ${showLine ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'}`}></div>
               <p className={`text-xs uppercase tracking-[0.4em] text-muted-foreground font-light transition-all duration-700 ${showLabel ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                Pristine Water Collection
+                {t.hero.label}
               </p>
             </div>
             
             <div className={`transition-all duration-1000 ${showTitle ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <img 
                 src={logo} 
-                alt="O.N.E. Water" 
+                alt={t.hero.logoAlt}
                 className="h-32 lg:h-40 mx-auto logo-primary-filter"
               />
             </div>
             
             <p className={`text-xl lg:text-2xl font-light text-foreground tracking-wide max-w-2xl mx-auto transition-all duration-1000 ${showSubtitle ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              From the depths of the Atlantic Ocean
+              {t.hero.subtitle}
             </p>
           </div>
           
           <div className={`pt-8 transition-all duration-1000 ${showDescription ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-md mx-auto">
-              Água purificada do mar com mais de 63 minerais naturais através de nanotecnologia avançada
+              {t.hero.description}
             </p>
           </div>
         </div>

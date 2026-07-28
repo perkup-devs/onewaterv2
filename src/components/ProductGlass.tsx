@@ -1,7 +1,9 @@
 import bottleGlass from '@/assets/bottle-glass.png';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useLanguage } from '@/i18n';
 
 const ProductGlass = () => {
+  const { t } = useLanguage();
   const imageAnim = useScrollAnimation();
   const contentAnim = useScrollAnimation();
   return (
@@ -14,7 +16,7 @@ const ProductGlass = () => {
               <div className="relative">
                 <img 
                   src={bottleGlass} 
-                  alt="O.N.E. Pristine Water Glass Bottle"
+                  alt={t.productGlass.alt}
                   className="w-full h-auto max-w-lg mx-auto animate-float drop-shadow-2xl"
                 />
               </div>
@@ -26,20 +28,20 @@ const ProductGlass = () => {
                 <div className="inline-block">
                   <div className="h-px w-16 bg-accent mb-6"></div>
                   <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-light">
-                    Glass Edition
+                    {t.productGlass.label}
                   </p>
                 </div>
                 
                 <h2 className="text-5xl lg:text-6xl font-extralight text-primary leading-tight">
-                  Pristine<br />Water
+                  {t.productGlass.titleLine1}<br />{t.productGlass.titleLine2}
                 </h2>
                 
                 <div className="space-y-4 pt-4">
                   <p className="text-lg font-light text-foreground">
-                    750ml
+                    {t.productGlass.volume}
                   </p>
                   <p className="text-sm text-muted-foreground font-light leading-relaxed max-w-md">
-                    Garrafa de vidro premium com tampa dourada. Pureza absoluta do oceano Atlântico em design minimalista e elegante.
+                    {t.productGlass.description}
                   </p>
                 </div>
               </div>
@@ -51,7 +53,7 @@ const ProductGlass = () => {
                   rel="noopener noreferrer"
                   className="group inline-block px-8 py-4 border border-primary text-primary tracking-[0.2em] text-xs uppercase font-light transition-all duration-700 hover:bg-primary hover:text-primary-foreground"
                 >
-                  Descubra
+                  {t.productGlass.cta}
                   <span className="inline-block ml-3 transition-transform duration-700 group-hover:translate-x-2">→</span>
                 </a>
               </div>

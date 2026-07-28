@@ -8,8 +8,10 @@ import beerCan from '@/assets/PHOTO-2026-05-28-11-12-54 2.jpg';
 import beerKit from '@/assets/PHOTO-2026-05-28-11-12-54.jpg';
 import beerKitBr from '@/assets/PHOTO-2026-05-28-11-12-55.jpg';
 import functionalBottles from '@/assets/PHOTO-2026-05-28-11-12-53.jpg';
+import { useLanguage } from '@/i18n';
 
 const ProductPremium = () => {
+  const { t } = useLanguage();
   const headerAnim = useScrollAnimation();
   const gridAnim1 = useScrollAnimation();
   const gridAnim2 = useScrollAnimation();
@@ -35,15 +37,14 @@ const ProductPremium = () => {
           <div className="inline-block">
             <div className="h-px w-24 bg-gold mx-auto mb-8"></div>
             <p className="text-xs uppercase tracking-[0.4em] text-gold font-light mb-6">
-              Coleção Exclusiva
+              {t.premium.headerLabel}
             </p>
           </div>
           <h2 className="text-5xl lg:text-7xl font-extralight text-white leading-tight mb-6">
-            ONE <span className="text-gold">Premium</span>
+            {t.premium.titlePrefix} <span className="text-gold">{t.premium.titleAccent}</span>
           </h2>
           <p className="text-lg font-light text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Uma nova era de sofisticação. Design audacioso em preto e dourado, 
-            onde cada detalhe reflete excelência e exclusividade.
+            {t.premium.description}
           </p>
         </div>
 
@@ -51,7 +52,7 @@ const ProductPremium = () => {
         <div ref={gridAnim1.ref} className={`mb-32 transition-all duration-1000 ${gridAnim1.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <div className="flex items-center gap-6 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">Ocean Water</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">{t.premium.oceanWater}</p>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
           </div>
 
@@ -61,13 +62,13 @@ const ProductPremium = () => {
               <div className="relative overflow-hidden rounded-sm bg-black/40 border border-gold/20">
                 <img 
                   src={oceanWaterReserve} 
-                  alt="ONE Ocean Water Reserve - Limited Edition"
+                  alt={t.premium.reserveAlt}
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">Limited Edition</p>
-                  <h3 className="text-3xl font-extralight text-white">Ocean Water Reserve</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.premium.reserveBadge}</p>
+                  <h3 className="text-3xl font-extralight text-white">{t.premium.reserveTitle}</h3>
                 </div>
               </div>
             </div>
@@ -77,36 +78,36 @@ const ProductPremium = () => {
               <div className="group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 flex-1">
                 <img 
                   src={oceanWaterBottles} 
-                  alt="ONE Ocean Water Collection"
+                  alt={t.premium.collectionAlt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">Collection</p>
-                  <h3 className="text-xl font-extralight text-white">Crystal Edition</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">{t.premium.collectionBadge}</p>
+                  <h3 className="text-xl font-extralight text-white">{t.premium.crystalTitle}</h3>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <div className="group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 aspect-[3/4]">
                   <img 
                     src={oceanWaterCanStill} 
-                    alt="ONE Ocean Water Still"
+                    alt={t.premium.stillAlt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-gold">Still</p>
+                    <p className="text-xs uppercase tracking-[0.2em] text-gold">{t.premium.stillLabel}</p>
                   </div>
                 </div>
                 <div className="group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 aspect-[3/4]">
                   <img 
                     src={oceanWaterCanSparkling} 
-                    alt="ONE Ocean Water Sparkling"
+                    alt={t.premium.sparklingAlt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-gold">Sparkling</p>
+                    <p className="text-xs uppercase tracking-[0.2em] text-gold">{t.premium.sparklingLabel}</p>
                   </div>
                 </div>
               </div>
@@ -118,7 +119,7 @@ const ProductPremium = () => {
         <div ref={gridAnim2.ref} className={`mb-32 transition-all duration-1000 ${gridAnim2.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <div className="flex items-center gap-6 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">Cerveja Premium</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">{t.premium.beerCollection}</p>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
           </div>
 
@@ -126,50 +127,50 @@ const ProductPremium = () => {
             <div className="lg:col-span-4 group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 aspect-[3/4]">
               <img 
                 src={beerBottle} 
-                alt="ONE Cerveja Premium Pilsen"
+                alt={t.premium.beerBottleAlt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">Puro Malte</p>
-                <h3 className="text-xl font-extralight text-white">Pilsen</h3>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">{t.premium.pureMalt}</p>
+                <h3 className="text-xl font-extralight text-white">{t.premium.pilsen}</h3>
               </div>
             </div>
             <div className="lg:col-span-4 group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 aspect-[3/4]">
               <img 
                 src={beerCan} 
-                alt="ONE Cerveja Premium Lata"
+                alt={t.premium.beerCanAlt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">Premium Can</p>
-                <h3 className="text-xl font-extralight text-white">350ml</h3>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">{t.premium.premiumCan}</p>
+                <h3 className="text-xl font-extralight text-white">{t.premium.volume350}</h3>
               </div>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-6">
               <div className="group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 flex-1">
                 <img 
                   src={beerKit} 
-                  alt="ONE Reserva Especial Kit"
+                  alt={t.premium.reserveKitAlt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">Reserva Especial</p>
-                  <h3 className="text-xl font-extralight text-white">Super Premium</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">{t.premium.specialReserve}</p>
+                  <h3 className="text-xl font-extralight text-white">{t.premium.superPremium}</h3>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20 flex-1">
                 <img 
                   src={beerKitBr} 
-                  alt="ONE Cerveja Puro Malte Kit"
+                  alt={t.premium.maltKitAlt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">Edição Limitada</p>
-                  <h3 className="text-xl font-extralight text-white">3 Garrafas</h3>
+                  <p className="text-xs uppercase tracking-[0.3em] text-gold mb-1">{t.premium.limitedEdition}</p>
+                  <h3 className="text-xl font-extralight text-white">{t.premium.threeBottles}</h3>
                 </div>
               </div>
             </div>
@@ -180,7 +181,7 @@ const ProductPremium = () => {
         <div ref={gridAnim3.ref} className={`transition-all duration-1000 ${gridAnim3.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <div className="flex items-center gap-6 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
-            <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">Ocean Nutrition Effect</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">{t.premium.nutrition}</p>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
           </div>
 
@@ -188,14 +189,14 @@ const ProductPremium = () => {
             <div className="group relative overflow-hidden rounded-sm bg-black/40 border border-gold/20">
               <img 
                 src={functionalBottles} 
-                alt="ONE Ocean Nutrition Effect - Functional Beverages"
+                alt={t.premium.functionalAlt}
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">Functional Beverage</p>
-                <h3 className="text-3xl font-extralight text-white mb-2">Ocean Nutrition Effect</h3>
-                <p className="text-sm text-white/60 font-light">Hibiscus · Seawepple & Saíca · Aloe Vera</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.premium.functionalBadge}</p>
+                <h3 className="text-3xl font-extralight text-white mb-2">{t.premium.nutrition}</h3>
+                <p className="text-sm text-white/60 font-light">{t.premium.functionalFlavors}</p>
               </div>
             </div>
           </div>
