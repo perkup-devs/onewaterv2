@@ -1,14 +1,18 @@
 import logo from '@/assets/logo.png';
 import { useLanguage } from '@/i18n';
+import { FileText } from 'lucide-react';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const whitePaperHref = language === 'pt'
+    ? '/documents/one-white-paper-pt-br.pdf'
+    : '/documents/one-white-paper-en.pdf';
 
   return (
     <footer className="bg-primary text-primary-foreground py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-16 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-12 mb-16">
             {/* Brand */}
             <div className="space-y-6">
               <img 
@@ -36,6 +40,21 @@ const Footer = () => {
               <p className="text-sm font-light opacity-80 leading-relaxed">
                 {t.footer.sustainabilityText}
               </p>
+            </div>
+
+            {/* Documents */}
+            <div className="space-y-6">
+              <h4 className="text-sm uppercase tracking-[0.2em] font-light">{t.footer.documentsTitle}</h4>
+              <a
+                href={whitePaperHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${t.footer.documentsTitle}: ${t.footer.whitePaper}`}
+                className="inline-flex items-center gap-2 text-sm font-light opacity-80 hover:opacity-100 hover:text-accent transition-all duration-300"
+              >
+                <FileText className="h-4 w-4 shrink-0" aria-hidden="true" />
+                <span>{t.footer.whitePaper}</span>
+              </a>
             </div>
           </div>
 
