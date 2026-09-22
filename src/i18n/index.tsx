@@ -22,6 +22,14 @@ export const translations = {
         es: "Espanhol",
       },
     },
+    brandFilm: {
+      label: "O universo O.N.E.",
+      title: "Do oceano ao seu momento",
+      description: "Assista ao filme e conheça a experiência O.N.E.",
+      ariaLabel: "Filme da marca O.N.E. Water",
+      fallback: "Seu navegador não suporta vídeo.",
+      link: "Assista ao filme O.N.E.",
+    },
     hero: {
       label: "Coleção Pristine Water",
       logoAlt: "O.N.E. Water",
@@ -146,6 +154,14 @@ export const translations = {
         es: "Spanish",
       },
     },
+    brandFilm: {
+      label: "The O.N.E. universe",
+      title: "From the ocean to your moment",
+      description: "Watch the film and discover the O.N.E. experience.",
+      ariaLabel: "O.N.E. Water brand film",
+      fallback: "Your browser does not support video.",
+      link: "Watch the O.N.E. film.",
+    },
     hero: {
       label: "Pristine Water Collection",
       logoAlt: "O.N.E. Water",
@@ -268,6 +284,14 @@ export const translations = {
         en: "Inglés",
         es: "Español",
       },
+    },
+    brandFilm: {
+      label: "El universo O.N.E.",
+      title: "Del océano a tu momento",
+      description: "Mira el vídeo y descubre la experiencia O.N.E.",
+      ariaLabel: "Vídeo de la marca O.N.E. Water",
+      fallback: "Tu navegador no admite vídeo.",
+      link: "Mira el vídeo de O.N.E.",
     },
     hero: {
       label: "Colección Pristine Water",
